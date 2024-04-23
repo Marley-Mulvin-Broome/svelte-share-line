@@ -3,7 +3,7 @@
 </script>
 
 <Line
-  url="https://www.marley-web.dev"
+  url="https://www.twitter.com/marley_eng"
   ariaLabel="シェア"
   class="line-font"
   fill
