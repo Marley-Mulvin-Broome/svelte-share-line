@@ -49,7 +49,8 @@
   --line-stroke={fill ? backgroundColor : iconColor}
   --line-fill={fill ? iconColor : backgroundColor}
 >
-  <svg slot="icon" aria-label="LINE" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <svelte:fragment slot="icon">
+    <svg slot="icon" aria-label="LINE" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M512.017 227.437c-2.734 61.513-28.706 103.889-69.715 140.796-72.448 64.247-187.272 143.53-202.308 131.227-15.037-19.137 28.706-64.246-27.34-71.08C92.365 411.975.778 327.224.778 227.436c0-112.09 116.191-205.042 256.987-205.042 140.796 0 258.354 92.953 254.253 205.042z"
       style="stroke-width:1.36695"
@@ -61,6 +62,8 @@
       stroke-width="24.25"
     />
   </svg>
+  </svelte:fragment>
+  
 
   <slot />
 </ShareButton>
