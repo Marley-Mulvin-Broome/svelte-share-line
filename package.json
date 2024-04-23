@@ -1,5 +1,5 @@
 {
-	"name": "line-share",
+	"name": "@svelte-share/line",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
