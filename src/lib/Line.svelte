@@ -21,6 +21,9 @@
    */
   export let fill = true;
 
+  /**
+   * Colour of the Line bubble icon
+   */
   export let iconColor = '#FFF';
 
   /**
