@@ -1,58 +1,49 @@
-# create-svelte
+# @svelte-share/line
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Simple svelte component for a share to line button.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Usage
 
-## Creating a project
+```svelte
+<script lang="ts">
+  import { Line } from '@svelte-share/line';
+</script>
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+<Line url="https://www.marley-web.dev" arialLabel="シェア" class="line-font" --share-button-gap="1.5em">
+  <span style="font-size: 1.3em; font-weight: 600;"> 
+    送る 
+  </span>
+</Line>
 ```
 
-## Developing
+## Properties
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+There are a variety of properties you can set to directly style the element. See `src/line/Line.svelte` to get a full list of settable variables.
 
-```bash
-npm run dev
+Some of the main ones:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- `--share-link-color` Colours text
+- `--share-button-gap` Gap between the icon and `Lines`'s child
+- `--share-padding` Padding for the button
+- `--share-button-background-color` Background colour for the button
+- `--share-button-hover-color` Hover colour for the button
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Direct styling
 
-## Building
+There are two ways to directly style the button
 
-To build your library:
+### Class prop
 
-```bash
-npm run package
-```
+You can pass through classes directly with class. This will be applied to the `<div>` within the `<a>` tag.
 
-To create a production version of your showcase app:
+### Global styles
 
-```bash
-npm run build
-```
+You may also globally style the button with Svelte's `:global(.class)` syntax. Here is a list of the classes used below in order of parent
 
-You can preview the production build with `npm run preview`.
+- `.share-line__link`
+- `.share-line__button`
+- `.share-line__icon`
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Contributing
 
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+Leave an issue or implement it yourself! I have no experience managing repos so lets all be nice to each other ❤️
